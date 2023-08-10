@@ -32,6 +32,6 @@ def chatbot(input_text):
 gr.Interface(fn=chatbot,
                      inputs=gr.components.Textbox(lines=7, label="Enter your text"),
                      outputs="text",
-                     title="Custom-trained AI Chatbot").launch()
+                     title="NoLev Astra Diagnosis Assistant").launch()
 
 index = construct_index("docs")
