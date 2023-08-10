@@ -34,4 +34,4 @@ gr.Interface(fn=chatbot,
                      outputs="text",
                      title="Custom-trained AI Chatbot")
 
-index = construct_index("/text.pdf")
+index = construct_index("docs")
