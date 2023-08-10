@@ -34,5 +34,5 @@ iface = gr.Interface(fn=chatbot,
                      outputs="text",
                      title="Custom-trained AI Chatbot")
 
-index = construct_index("docs")
+index = construct_index("")
 iface.launch(share=True)
