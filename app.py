@@ -29,10 +29,9 @@ def chatbot(input_text):
     response = index.query(input_text, response_mode="compact")
     return response.response
 
-iface = gr.Interface(fn=chatbot,
+gr.Interface(fn=chatbot,
                      inputs=gr.components.Textbox(lines=7, label="Enter your text"),
                      outputs="text",
                      title="Custom-trained AI Chatbot")
 
-index = construct_index("/")
-iface.launch(share=True)
+index = construct_index("/text.pdf")
