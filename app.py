@@ -4,7 +4,7 @@ import gradio as gr
 import sys
 import os
 
-os.environ["OPENAI_API_KEY"] = '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'
+os.environ["OPENAI_API_KEY"] = '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'
 
 def construct_index(directory_path):
     max_input_size = 4096
@@ -14,7 +14,7 @@ def construct_index(directory_path):
 
     prompt_helper = PromptHelper(max_input_size, num_outputs, max_chunk_overlap, chunk_size_limit=chunk_size_limit)
 
-    llm_predictor = LLMPredictor(llm=ChatOpenAI(temperature=0.7, model_name="gpt-3.5-turbo", max_tokens=num_outputs))
+    llm_predictor = LLMPredictor(llm=ChatOpenAI(temperature=0.6, model_name="gpt-3.5-turbo", max_tokens=num_outputs))
 
     documents = SimpleDirectoryReader(directory_path).load_data()
 
